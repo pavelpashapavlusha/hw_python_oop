@@ -117,8 +117,6 @@ class Swimming(Training):
                 * self.MULTIPLICATION_BY_TWO * self.weight)
 
 
-
-
 def read_package(workout_type: str, data: list) -> Training:
     """Прочитать данные полученные от датчиков."""
     Trainings: dict = {'RUN': Running, 'WLK': SportsWalking, 'SWM': Swimming}
