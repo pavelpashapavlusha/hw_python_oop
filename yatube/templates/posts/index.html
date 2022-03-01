@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-{% for post in posts %}     
+  {% for post in posts %}     
         <h1>{{ Главная страница }}</h1>
         <article>
           <ul>
@@ -46,6 +46,6 @@
             <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
           {% endif %}
         </article>   
+    {% if not forloop.last %}<hr>{% endif %}
+  {% endfor %}  
 {% endblock %}
-{% if not forloop.last %}<hr>{% endif %}
-{% endfor %}
